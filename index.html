@@ -51,8 +51,6 @@ body{
 
     // Load the image model and setup the webcam
     async function init() {
-            document.getElementById("startBtn").style.display = 'none';
-            document.getElementById("loadingMsg").style.display = 'block';		    
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
@@ -76,13 +74,6 @@ body{
         for (let i = 0; i < maxPredictions; i++) { // and class labels
             labelContainer.appendChild(document.createElement("div"));
         }
-            statusDiv = document.createElement('div');
-            statusDiv.style.position = "absolute";
-            statusDiv.style.top = "50%";
-            statusDiv.style.left = "30%";
-            statusDiv.style.transform = "rotate(-0deg)";
-            statusDiv.style.fontSize = "50pt";
-            document.body.appendChild(statusDiv);		    
     }
 
     async function loop() {
@@ -95,7 +86,6 @@ body{
 
     // run the webcam image through the image model
     async function predict() {
-            document.getElementById("loadingMsg").style.display = 'none';		    
         // predict can take in an image, video or canvas html element
         const prediction = await model.predict(webcam.canvas);
         let predictedClasses = [];     		    
