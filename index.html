@@ -35,7 +35,8 @@ body{
     // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
     // the link to your model provided by Teachable Machine export panel
-    const URL = "https://teachablemachine.withgoogle.com/models/XtvY6Cnnp/";
+    //const URL = "https://teachablemachine.withgoogle.com/models/XtvY6Cnnp/";
+    const URL = "https://teachablemachine.withgoogle.com/models/OY1FptQXc/";
         const handSymbols = {
 		A: "A",
 		B: "B",
@@ -122,7 +123,7 @@ body{
         function displayRecognitionResult(classes) {
             if(classes.length == 0) {
                 document.body.style.backgroundColor = 'gray';
-                //statusDiv.innerHTML = '? ? ? <br\><span style="font-size:25px;color:blue;">(Point camera to the Hand Symbol)</span>';
+                statusDiv.innerHTML = '? ? ? <br\><span style="font-size:25px;color:blue;">(Point camera to the Hand Symbol)</span>';
             }
             if(classes.length == 1) {
                 const handStatus = handSymbols[classes[0]];
