@@ -122,7 +122,7 @@ body{
         function displayRecognitionResult(classes) {
             if(classes.length == 0) {
                 document.body.style.backgroundColor = 'gray';
-                statusDiv.innerHTML = '? ? ? <br\><span style="font-size:25px;color:blue;">(Point camera to the Hand Symbol)</span>';
+                //statusDiv.innerHTML = '? ? ? <br\><span style="font-size:25px;color:blue;">(Point camera to the Hand Symbol)</span>';
             }
             if(classes.length == 1) {
                 const handStatus = handSymbols[classes[0]];
