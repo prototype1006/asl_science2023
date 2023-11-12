@@ -98,7 +98,8 @@ body{
                 }
 			
             const classPrediction =
-                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+//                prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+                prediction[i].className + ": " + prediction[i].probability;
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }
             displayRecognitionResult(predictedClasses);		    
@@ -113,27 +114,27 @@ body{
                 const handStatus = handSymbols[classes[0]];
                 if (handStatus === 'A') {
                     document.body.style.backgroundColor = '#9FE2BF';
-                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">Healthy</span>';
+                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">A</span>';
                 }
                 if (handStatus === 'B') {
                     document.body.style.backgroundColor = '#9FE2BF';
-                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">Healthy</span>';
+                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">B</span>';
                 }
                 if (handStatus === 'C') {
                     document.body.style.backgroundColor = '#9FE2BF';
-                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">Healthy</span>';
+                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">C</span>';
                 }
                 if (handStatus === 'D') {
                     document.body.style.backgroundColor = '#9FE2BF';
-                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">Healthy</span>';
+                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">D</span>';
                 }
                 if (handStatus === 'E') {
                     document.body.style.backgroundColor = '#9FE2BF';
-                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">Healthy</span>';
+                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:green;">E</span>';
                 }
                 if (handStatus === 'Nothing') {
                     document.body.style.backgroundColor = '#FFA07A';
-                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:red;">NOT Healthy</span>';
+                    statusDiv.innerHTML = classes[0] + '<br\><span style="color:red;">NOT Recognized</span>';
                 }
             }
             if(classes.length > 1) {
